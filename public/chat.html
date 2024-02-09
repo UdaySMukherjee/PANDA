@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. PANDA </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        .chat-container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .chat-header {
+            background-color: #200049;
+            color: #fff;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .chat-history {
+            height: 70vh;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .chat-input-container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-top: 1px solid #eee5b1;
+        }
+
+        .chat-input {
+            flex: 1;
+            border: none;
+            border-radius: 0.25rem;
+            min-height: 40px;
+            max-height: 100px;
+            overflow-y: auto;
+        }
+
+        .submit-button {
+            background-color: #200049;
+            color: #fff;
+            border: none;
+            border-radius: 0.25rem;
+            margin-left: 10px;
+            transition: background-color 0.3s ease; /* Add a transition effect for a smooth color change */
+        }
+
+        .submit-button:hover {
+            background-color: #157aa8; /* Pink color */
+        }
+
+        .submit-button img {
+            width: 50px; /* Adjust the image size as needed */
+            height: 50px;
+        }
+
+        .spinner {
+            color: #1411a0;
+        }
+
+        /* New style for green chat box */
+        .green-chat-box {
+            background-color: #dcf8c6; /* Green background color */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chat-container mt-5">
+        <h1 class="chat-header">Dr. PANDA</h1>
+        <div class="card">
+            <div class="card-header">
+                <!--Chat History-->
+            </div>
+            <ul id="chat-history" class="chat-history list-group list-group-flush">
+                <!--Chat Messages will be displayed here-->
+            </ul>
+        </div>
+        <div class="chat-input-container">
+            <span class="input-group-text">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                    class="bi bi-person-circle user-icon" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                </svg>
+            </span>
+            <textarea id="user-input" class="form-control chat-input" aria-label="With textarea"
+                placeholder="Type a message..."></textarea>
+            <button id="submit" type="button" class="btn submit-button">
+                <img src="./assets/send.png" alt="Send">
+            </button>
+            <div id="spinner" class="spinner-grow spinner visually-hidden mt-2" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/shared.js"></script>
+</body>
+
+</html>
